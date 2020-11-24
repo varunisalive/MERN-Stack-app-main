@@ -1,0 +1,6 @@
+[submodule "MERN-stack-app-submodule"]
+	path = MERN-stack-app-submodule
+	url = https://github.com/varunisalive/MERN-stack-app-submodule.git
+[submodule "client"]
+	path = client
+	url = https://github.com/varunisalive/MERN-stack-app-submodule.git
