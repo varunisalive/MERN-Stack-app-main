@@ -2,6 +2,8 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const path = require("path");
+//method 1 of overcoming the cors policy issue 
+// const cors = require("cors");
 
 const app = express();
 
@@ -27,10 +29,11 @@ const data = {
 //   }
 // });
 
+// app.use(cors());
 app.use(morgan('tiny'));
 
 //Routes
-app.use("/", apiRoutes);
+app.use("/api", apiRoutes);
 
 const port = process.env.PORT || 8080;
 
