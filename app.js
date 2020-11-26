@@ -2,7 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const path = require("path");
-//method 1 of overcoming the cors policy issue 
+//method 1 of overcoming the cors policy issue
 // const cors = require("cors");
 
 const app = express();
@@ -13,6 +13,9 @@ mongoose.connect("mongodb://localhost:27017/appDB", {useNewUrlParser: true, useU
 mongoose.connection.on('connected', () => {
   console.log("Mongoose is connected");
 });
+
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
 
 const data = {
